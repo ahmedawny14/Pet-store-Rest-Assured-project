@@ -1,0 +1,30 @@
+{
+  "id": 1,
+  "category": {
+    "id": 1,
+    "name": "pets"
+  },
+  "name": "dog",
+  "photoUrls": [
+    "example.jpg"
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "dogs"
+    }
+  ],
+  "status": "available",
+  "getPet": {
+    "invalidPetId": 100001
+  },
+  "updatePet": {
+    "name": "cat",
+    "status": "unavailable"
+  },
+  "errorMessages": {
+    "code": 1,
+    "type": "error",
+    "message": "Pet not found"
+  }
+}

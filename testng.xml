@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="PetStore API Test Suite" parallel="false">
+    <test name="PetStore Functional Tests">
+        <classes>
+            <class name="test.petsTests.AddPetTest"/>
+            <class name="test.petsTests.GetPetTest"/>
+            <class name="test.petsTests.UpdatePetTest"/>
+            <class name="test.petsTests.DeletePetTest"/>
+            <class name="test.storeTests.StoreTests"/>
+            <class name="test.userTests.UserTests"/>
+        </classes>
+    </test>
+</suite>
