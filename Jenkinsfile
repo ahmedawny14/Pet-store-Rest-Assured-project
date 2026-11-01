@@ -18,12 +18,11 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            // إنشاء ورسم تقرير Allure بغض النظر عن نتيجة الاختبارات
-            allure includeProperties: false, 
-                   jdk: '', 
-                   results: [[path: 'target/allure-results']]
-        }
+ post {
+    always {
+        allure includeProperties: false, 
+               jdk: '', 
+               results: [[path: 'target/allure-results']]
     }
+}
 }
