@@ -12,16 +12,15 @@ pipeline {
         stage('Run Tests') {
             steps {
                 echo 'Executing Maven Tests...'
-                // استخدام bat بدلاً من sh لنظام Windows
-                bat 'mvn clean test' 
+                // تشغيل التستات عبر Maven
+                bat 'mvn clean test'
             }
         }
     }
 
     post {
         always {
-            echo 'Generating Allure Report...'
-            // استخدام اسم الأداة المعرفة في Jenkins
+            // إنشاء ورسم تقرير Allure بغض النظر عن نتيجة الاختبارات
             allure includeProperties: false, 
                    jdk: '', 
                    results: [[path: 'target/allure-results']]
